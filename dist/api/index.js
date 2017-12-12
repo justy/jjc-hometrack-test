@@ -20,20 +20,19 @@ exports.default = function (_ref) {
 
 	var api = (0, _express.Router)();
 
-	// mount the facets resource
-	api.use('/facets', (0, _facets2.default)({ config: config, db: db }));
+	// // mount the facets resource
+	// api.use('/facets', facets({ config, db }));
 
-	// perhaps expose some API metadata at the root
-	api.get('/', function (req, res) {
-		res.json({ version: _package.version });
-	});
 
 	api.post('/', function (req, res) {
 
 		// Examine the payload
-		console.log("req: ", req);
+		var payload = req.body.package.json;
 
-		res.json({ 'msg': 'yep' });
+		if (payload === undefined) {
+			res.json({ "error": "Could not decode request: no payload provided" });
+			res.send(400);
+		} else {}
 	});
 
 	return api;
