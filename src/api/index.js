@@ -4,13 +4,6 @@ import { Router } from 'express';
 export default ( {config,db} ) => {
 	let api = Router();
 
-	api.get( '/', ( req, res ) => {
-		console.log("yep");
-		res.json( {
-			message: "GET with the program.."
-		} );
-	} );
-
 	api.post( '/', ( req, res ) => {
 
 		// Examine the body
