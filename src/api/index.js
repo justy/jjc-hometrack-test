@@ -1,19 +1,15 @@
-import {
-	version
-} from '../../package.json';
-import {
-	Router
-} from 'express';
+import { version } from '../../package.json';
+import { Router } from 'express';
 
-export default ( {
-	config,
-	db
-} ) => {
+export default ( {config,db} ) => {
 	let api = Router();
 
-	// // mount the facets resource
-	// api.use('/facets', facets({ config, db }));
-
+	api.get( '/', ( req, res ) => {
+		console.log("yep");
+		res.json( {
+			message: "GET with the program.."
+		} );
+	} );
 
 	api.post( '/', ( req, res ) => {
 
