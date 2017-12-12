@@ -16,13 +16,6 @@ exports.default = function (_ref) {
 
 	var api = (0, _express.Router)();
 
-	api.get('/', function (req, res) {
-		console.log("yep");
-		res.json({
-			message: "GET with the program.."
-		});
-	});
-
 	api.post('/', function (req, res) {
 
 		// Examine the body
@@ -71,7 +64,7 @@ exports.default = function (_ref) {
 									// This content would of course be better provided as parameters to the POST query- i.e filter by type=foo and workflow=bar
 									var concatenated_address = element.address.buildingNumber + " " + element.address.street + " " + element.address.suburb + " " + element.address.state + " " + element.address.postcode;
 									var transformed_element = {
-										address: concatenated_address,
+										concataddress: concatenated_address,
 										type: element.type, // Setting this to element.type rather than "htv" for possible future expansion
 										workflow: element.workflow // Ditto
 									};

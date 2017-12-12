@@ -49,7 +49,7 @@ export default ( {config,db} ) => {
 									element.address.state + " " +
 									element.address.postcode;
 								let transformed_element = {
-									address: concatenated_address,
+									concataddress: concatenated_address,
 									type: element.type, // Setting this to element.type rather than "htv" for possible future expansion
 									workflow: element.workflow // Ditto
 								};
