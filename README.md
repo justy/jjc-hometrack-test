@@ -7,8 +7,8 @@
 2. The type
 3. The workflow
 - [x] Return an error message if the POST body is not correctly formatted JSON.
-• No "payload"
-• payload is not an array
+- [x] Return an error message if there is no "payload"
+- [x] Return an error message if the payload is not an array
 
 URL for this API is http://justy-hometrack-test.herokuapp.com/api
 
